@@ -21,4 +21,8 @@ class Phantomjs < Formula
 
     assert_equal "hello", shell_output("#{bin}/phantomjs #{path}").strip
   end
+
+  def caveats
+    "Download the Adobe Flash system plugin from http://get.adobe.com/flashplayer/"
+  end
 end
