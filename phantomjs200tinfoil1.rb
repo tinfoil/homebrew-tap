@@ -1,11 +1,9 @@
 require "formula"
 
-class Phantomjs < Formula
+class Phantomjs200tinfoil1 < Formula
   homepage "https://github.com/tinfoil/phantomjs"
-  url "https://github.com/tinfoil/phantomjs/releases/download/1.10.0.tinfoil.1/phantomjs-1.10.0.tinfoil.1-macosx.zip"
-  sha1 "4436042a7c3c326fddf0415d2eaec72a86472339"
-
-  depends_on :x11
+  url "https://github.com/tinfoil/phantomjs/releases/download/2.0.0.tinfoil.1/phantomjs-2.0.0.tinfoil.1-macosx.zip"
+  sha256 "016cd256770fc5f7de54f78b84e29ddda18af54d9732e67c121ff6bead667d4e"
 
   def install
     bin.install "bin/phantomjs"
@@ -20,9 +18,5 @@ class Phantomjs < Formula
     EOS
 
     assert_equal "hello", shell_output("#{bin}/phantomjs #{path}").strip
-  end
-
-  def caveats
-    "Download the Adobe Flash system plugin from http://get.adobe.com/flashplayer/"
   end
 end
